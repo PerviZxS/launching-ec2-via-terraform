@@ -9,7 +9,7 @@ resource "aws_security_group" "MY-SG" {
 
 resource "aws_vpc_security_group_ingress_rule" "sshfromMyIP" {
   security_group_id = aws_security_group.MY-SG.id
-  cidr_ipv4         = "0.0.0.0/0"
+  cidr_ipv4         = "0.0.0.0/0" #it cloud be your ip address for security reasons like 10.10.10.200/32
   from_port         = 22
   ip_protocol       = "tcp"
   to_port           = 22
